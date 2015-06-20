@@ -113,15 +113,18 @@ IMAGES
 ****************************************/
 
 .photo-card {
-  background: hsla(0, 0%, 100%, .7);
+  // background: #000;
   width: 100%;
   // height: 15rem;
-  padding: 1rem;
   margin: 0 0 1rem 0;
+  // padding: .5rem;
+  // padding-bottom: .1rem;
 }
 
 img {
   width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 
@@ -170,3 +173,28 @@ section {
     display: none;
   }
 }
+
+
+/****************************************
+FILTERS
+****************************************/
+
+.photos {
+  &.reverse {
+    flex-wrap: wrap-reverse;
+  }
+  &.odd {
+    .photo-card:nth-child(even) {
+      display: none;
+    }
+  }
+  &.even {
+    .photo-card:nth-child(odd) {
+      display: none;
+    }
+  }
+}
+
+
+
+
