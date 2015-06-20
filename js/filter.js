@@ -3,8 +3,14 @@ $(document).on('ready', function(){
     var self = $(this);
     e.preventDefault();
     var filter = self.data('filter');
-    $('.photos').addClass(filter);
-    var button = self.detach();
-    $('.applied').append(button);
+    if ($('.photos').hasClass(filter)) {
+      $('.photos').removeClass(filter);
+      var button = self.detach();
+      $('.available').append(button);
+    } else {
+      $('.photos').addClass(filter);
+      var button = self.detach();
+      $('.applied').append(button);
+    }
   });
 });

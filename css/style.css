@@ -108,7 +108,7 @@ section {
   height: 0;
   overflow: hidden;
   transition: all 500ms ease-out;
-  background: #eee; }
+  background: rgba(237, 237, 237, 0.9); }
   section.open {
     min-height: 15rem;
     overflow: auto;
