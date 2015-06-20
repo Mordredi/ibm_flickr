@@ -40,7 +40,7 @@ LAYOUT
 ****************************************/
 
 header,
-ul,
+.photos,
 section,
 .filters {
   display: flex;
@@ -72,10 +72,28 @@ section {
   top: 3rem;
 }
 
-ul {
+.photos {
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
+@media screen and (min-width: 800px) {
+  main {
+    display: flex;
+  }
+
+  article {
+    width: 70%;
+    height: 93vh;
+    overflow: auto;
+  }
+
+  section {
+    position: static;
+    width: 30%;
+    justify-content: start;
+  }
+}
 
 /****************************************
 COLORS
@@ -115,6 +133,18 @@ IMAGES
 .photo-card {
   width: 100%;
   margin: 0 0 1rem 0;
+}
+
+@media screen and (min-width: 500px) {
+  .photo-card {
+    width: 15rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .photo-card {
+    width: 20rem;
+  }
 }
 
 img {
@@ -170,6 +200,11 @@ section {
   }
 }
 
+@media screen and (min-width: 800px) {
+  section {
+    height: 93vh;
+  }
+}
 
 /****************************************
 FILTERS
