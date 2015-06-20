@@ -2,171 +2,126 @@
 BASE
 ****************************************/
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   line-height: 1.5;
   font-size: 1em;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 h1 {
-  font-size: 4.236rem;
-}
+  font-size: 4.236rem; }
 
 h2 {
-  font-size: 2.618rem;
-}
+  font-size: 2.618rem; }
 
 h3 {
-  font-size: 1.618rem;
-}
+  font-size: 1.618rem; }
 
 p {
-  font-size: 1rem;
-}
+  font-size: 1rem; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 /****************************************
 LAYOUT
 ****************************************/
-
 header,
 ul,
 section,
 .filters {
-  display: flex;
-}
+  display: flex; }
 
 header {
   align-items: center;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
 section,
 header {
   position: fixed;
-  width: 100%;
-}
+  width: 100%; }
 
 main {
-  padding-top: 3rem;
-}
+  padding-top: 3rem; }
 
 section,
 .filters {
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
 section {
-  top: 3rem;
-}
+  top: 3rem; }
 
 ul {
-  flex-wrap: wrap;
-}
-
+  flex-wrap: wrap; }
 
 /****************************************
 COLORS
 ****************************************/
-
-$primary-color: hsl(82, 85%, 45%);
-$darkest-primary: hsl(90, 100%, 0%);
-$dark-primary: hsl(120, 59%, 19%);
-$lightest-primary: hsl(85, 76%, 75%);
-
-
 /****************************************
 HEADER
 ****************************************/
-
 header {
-  background: $dark-primary;
+  background: #144d14;
   padding-left: .5rem;
-  height: 3rem;
-}
+  height: 3rem; }
 
 .logo,
 .filter-menu {
   font-size: 1.618em;
-  color: #fff;
-}
+  color: #fff; }
 
 .filter-menu:hover {
-  cursor: pointer;
-}
-
+  cursor: pointer; }
 
 /****************************************
 IMAGES
 ****************************************/
-
 .photo-card {
-  background: hsla(0, 0%, 100%, .7);
+  background: rgba(255, 255, 255, 0.7);
   width: 100%;
-  // height: 15rem;
   padding: 1rem;
-  margin: 0 0 1rem 0;
-}
+  margin: 0 0 1rem 0; }
 
 img {
-  width: 100%;
-}
-
+  width: 100%; }
 
 /****************************************
 ARTICLE
 ****************************************/
-
 article {
-  background: $lightest-primary;
-  h1 {
+  background: #c7f08f; }
+  article h1 {
     font-size: 2.3rem;
     text-align: center;
-    color: $darkest-primary;
-  }
-}
+    color: black; }
 
 /****************************************
 SECTION
 ****************************************/
-
 section {
   height: 0;
   overflow: hidden;
   transition: all 500ms ease-out;
-  background: #eee;
-  &.open {
+  background: #eee; }
+  section.open {
     min-height: 15rem;
     overflow: auto;
     z-index: 10;
-    padding: .5rem;
-  }
-}
-
-.filters {
-}
+    padding: .5rem; }
 
 .filter {
-  background: $primary-color;
+  background: #8dd411;
   color: #fff;
   font-size: 1.3rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   width: 15rem;
   text-align: center;
-  margin-top: .5rem;
-  &.applied {
-    display: none;
-  }
-}
+  margin-top: .5rem; }
+  .filter.applied {
+    display: none; }
