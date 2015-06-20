@@ -1,7 +1,10 @@
 $(document).on('ready', function(){
-  $('.available').on('click', function(e){
+  $('.filter').on('click', function(e){
+    var self = $(this);
     e.preventDefault();
-    var filter = $(this).data('filter');
+    var filter = self.data('filter');
     $('.photos').addClass(filter);
+    var button = self.detach();
+    $('.applied').append(button);
   });
 });
