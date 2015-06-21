@@ -15,7 +15,7 @@ $(document).on('ready', function(){
 function insertHtml(photos){
   for (var i = 0; i < photos.length; i++) {
     var url = 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '.jpg';
-    $('.photos').append('<li class="photo-card"><img src="' + url + '" /></li>');
+    $('.photos').append('<li class="photo-card"><img class="photo" src="' + url + '" /></li>');
   }
 }
 
