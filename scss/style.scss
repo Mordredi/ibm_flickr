@@ -181,6 +181,8 @@ ARTICLE
 article {
   background: radial-gradient(circle at top, #fff 25%, $lightest-primary);
   height: 100%;
+  height: 95.2vh;
+  overflow: auto;
   h1 {
     margin: .5rem 0;
     font-size: 2.3rem;
@@ -193,7 +195,6 @@ article {
   article {
     width: 70%;
     height: 93vh;
-    overflow: auto;
   }
 }
 
