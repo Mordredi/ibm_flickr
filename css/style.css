@@ -150,17 +150,12 @@ section {
   height: 0;
   overflow: hidden;
   transition: all 500ms ease-out;
-  background: rgba(237, 237, 237, 0.9); }
+  background: rgba(237, 237, 237, 0.96); }
   section.open {
     min-height: 15rem;
     overflow: auto;
     z-index: 10;
     padding: .5rem; }
-
-.filters {
-  margin-bottom: .5rem; }
-  .filters.available {
-    margin-top: .3rem; }
 
 .filter {
   background: #8dd411;
@@ -170,7 +165,8 @@ section {
   padding: 0.5rem 1rem;
   width: 15rem;
   text-align: center;
-  margin-top: .5rem; }
+  margin-top: .5rem;
+  line-height: 0.9rem; }
   .filter:hover {
     background: #144d14; }
   .filter.applied {
@@ -179,7 +175,12 @@ section {
 @media screen and (min-width: 800px) {
   section {
     height: 93vh;
-    border-left: 1px solid #ccc; } }
+    border-left: 1px solid #ccc;
+    padding: 1rem; }
+  .applied {
+    margin-top: .5rem; }
+  .filter {
+    line-height: initial; } }
 
 /****************************************
 FILTERS
