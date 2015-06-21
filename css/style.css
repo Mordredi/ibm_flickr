@@ -41,10 +41,16 @@ header,
 .photos,
 section,
 .filters {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 header {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 section,
@@ -57,19 +63,31 @@ main {
 
 section,
 .filters {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around; }
 
 section {
   top: 3rem; }
 
 .photos {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around; }
 
 @media screen and (min-width: 800px) {
   main {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
   article {
     width: 70%;
@@ -78,9 +96,13 @@ section {
   section {
     position: static;
     width: 30%;
-    justify-content: start; }
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
   header {
-    justify-content: start; } }
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; } }
 
 /****************************************
 COLORS
@@ -176,7 +198,8 @@ section {
   section {
     height: 93vh;
     border-left: 1px solid #ccc;
-    padding: 1rem; }
+    padding: 1rem;
+    transition: none; }
   .applied {
     margin-top: .5rem; }
   .filter {
@@ -186,6 +209,8 @@ section {
 FILTERS
 ****************************************/
 .photos.reverse {
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
   flex-wrap: wrap-reverse; }
 
 .photos.odd .photo-card:nth-child(even) {

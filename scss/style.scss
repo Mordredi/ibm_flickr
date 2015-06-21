@@ -100,11 +100,11 @@ section {
   section {
     position: static;
     width: 30%;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   header {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 
@@ -217,16 +217,6 @@ section {
   }
 }
 
-.subtext {
-  // margin: .3rem 0;
-}
-// .filters {
-//   margin-bottom: .5rem;
-//   &.available {
-//     margin-top: .3rem;
-//   }
-// }
-
 .filter {
   background: $primary-color;
   color: #fff;
@@ -250,6 +240,7 @@ section {
     height: 93vh;
     border-left: 1px solid #ccc;
     padding: 1rem;
+    transition: none;
   }
 
   .applied {
