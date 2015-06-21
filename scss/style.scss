@@ -91,18 +91,6 @@ section {
     display: flex;
   }
 
-  article {
-    width: 70%;
-    height: 93vh;
-    overflow: auto;
-  }
-
-  section {
-    position: static;
-    width: 30%;
-    justify-content: flex-start;
-  }
-
   header {
     justify-content: flex-start;
   }
@@ -192,11 +180,20 @@ ARTICLE
 
 article {
   background: radial-gradient(circle at top, #fff 25%, $lightest-primary);
+  height: 100%;
   h1 {
     margin: .5rem 0;
     font-size: 2.3rem;
     text-align: center;
     color: #222;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  article {
+    width: 70%;
+    height: 93vh;
+    overflow: auto;
   }
 }
 
@@ -241,6 +238,9 @@ section {
     border-left: 1px solid #ccc;
     padding: 1rem;
     transition: none;
+    position: static;
+    width: 30%;
+    justify-content: flex-start;
   }
 
   .applied {
