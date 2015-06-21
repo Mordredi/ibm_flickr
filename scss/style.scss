@@ -35,6 +35,15 @@ a {
   text-decoration: none;
 }
 
+.ibm {
+  font-weight: bold;
+}
+
+.subtext {
+  font-size: .83rem;
+  color: #777;
+}
+
 /****************************************
 LAYOUT
 ****************************************/
@@ -48,7 +57,7 @@ section,
 
 header {
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 section,
@@ -85,12 +94,21 @@ section {
   article {
     width: 70%;
     height: 93vh;
+    // overflow: auto;
+  }
+
+  .photos {
+    height: 87%;
     overflow: auto;
   }
 
   section {
     position: static;
     width: 30%;
+    justify-content: start;
+  }
+
+  header {
     justify-content: start;
   }
 }
@@ -111,7 +129,6 @@ HEADER
 
 header {
   background: $dark-primary;
-  padding-left: .5rem;
   height: 3rem;
 }
 
@@ -119,10 +136,18 @@ header {
 .filter-menu {
   font-size: 1.618em;
   color: #fff;
+  margin: 0 2rem;
+  text-shadow: 0 2px 2px $darkest-primary;
 }
 
 .filter-menu:hover {
   cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .filter-menu {
+    display: none;
+  }
 }
 
 
@@ -130,12 +155,22 @@ header {
 IMAGES
 ****************************************/
 
+img {
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
 .photo-card {
   width: 100%;
   margin: 0 0 1rem 0;
 }
 
 @media screen and (min-width: 500px) {
+  img {
+    border: 3px solid black;
+  }
+
   .photo-card {
     width: 15rem;
   }
@@ -147,11 +182,13 @@ IMAGES
   }
 }
 
-img {
-  width: 100%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+@media screen and (min-width: 700px) {
+  .photo-card {
+    width: 15rem;
+  }
 }
+
+
 
 
 /****************************************
@@ -159,11 +196,12 @@ ARTICLE
 ****************************************/
 
 article {
-  background: $lightest-primary;
+  background: radial-gradient(circle at top, #fff 25%, $lightest-primary);
   h1 {
+    margin: .5rem 0;
     font-size: 2.3rem;
     text-align: center;
-    color: $darkest-primary;
+    color: #222;
   }
 }
 
@@ -185,16 +223,24 @@ section {
 }
 
 .filters {
+  margin-bottom: .5rem;
+  &.available {
+    margin-top: .3rem;
+  }
 }
 
 .filter {
   background: $primary-color;
   color: #fff;
+  text-shadow: 0 1px 1px #333;
   font-size: 1.3rem;
   padding: .5rem 1rem;
   width: 15rem;
   text-align: center;
   margin-top: .5rem;
+  &:hover {
+    background: $dark-primary;
+  }
   &.applied {
     display: none;
   }
@@ -203,6 +249,7 @@ section {
 @media screen and (min-width: 800px) {
   section {
     height: 93vh;
+    border-left: 1px solid #ccc;
   }
 }
 

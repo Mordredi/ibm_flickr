@@ -27,6 +27,13 @@ p {
 a {
   text-decoration: none; }
 
+.ibm {
+  font-weight: bold; }
+
+.subtext {
+  font-size: .83rem;
+  color: #777; }
+
 /****************************************
 LAYOUT
 ****************************************/
@@ -38,7 +45,7 @@ section,
 
 header {
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-between; }
 
 section,
 header {
@@ -66,11 +73,15 @@ section {
     display: flex; }
   article {
     width: 70%;
-    height: 93vh;
+    height: 93vh; }
+  .photos {
+    height: 87%;
     overflow: auto; }
   section {
     position: static;
     width: 30%;
+    justify-content: start; }
+  header {
     justify-content: start; } }
 
 /****************************************
@@ -81,25 +92,37 @@ HEADER
 ****************************************/
 header {
   background: #144d14;
-  padding-left: .5rem;
   height: 3rem; }
 
 .logo,
 .filter-menu {
   font-size: 1.618em;
-  color: #fff; }
+  color: #fff;
+  margin: 0 2rem;
+  text-shadow: 0 2px 2px black; }
 
 .filter-menu:hover {
   cursor: pointer; }
 
+@media screen and (min-width: 800px) {
+  .filter-menu {
+    display: none; } }
+
 /****************************************
 IMAGES
 ****************************************/
+img {
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black; }
+
 .photo-card {
   width: 100%;
   margin: 0 0 1rem 0; }
 
 @media screen and (min-width: 500px) {
+  img {
+    border: 3px solid black; }
   .photo-card {
     width: 15rem; } }
 
@@ -107,20 +130,20 @@ IMAGES
   .photo-card {
     width: 20rem; } }
 
-img {
-  width: 100%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black; }
+@media screen and (min-width: 700px) {
+  .photo-card {
+    width: 15rem; } }
 
 /****************************************
 ARTICLE
 ****************************************/
 article {
-  background: #c7f08f; }
+  background: radial-gradient(circle at top, #fff 25%, #c7f08f); }
   article h1 {
+    margin: .5rem 0;
     font-size: 2.3rem;
     text-align: center;
-    color: black; }
+    color: #222; }
 
 /****************************************
 SECTION
@@ -136,20 +159,29 @@ section {
     z-index: 10;
     padding: .5rem; }
 
+.filters {
+  margin-bottom: .5rem; }
+  .filters.available {
+    margin-top: .3rem; }
+
 .filter {
   background: #8dd411;
   color: #fff;
+  text-shadow: 0 1px 1px #333;
   font-size: 1.3rem;
   padding: 0.5rem 1rem;
   width: 15rem;
   text-align: center;
   margin-top: .5rem; }
+  .filter:hover {
+    background: #144d14; }
   .filter.applied {
     display: none; }
 
 @media screen and (min-width: 800px) {
   section {
-    height: 93vh; } }
+    height: 93vh;
+    border-left: 1px solid #ccc; } }
 
 /****************************************
 FILTERS
